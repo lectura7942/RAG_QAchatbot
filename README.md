@@ -2,7 +2,24 @@
 
 실행 방법과 코드 설명은 `RAG 챗봇 개발 (OpenAI API, Langchain, Streamlit).ipynb` 노트북에 있습니다. Colab 환경에서 실행하는 것을 가정합니다.
 - 과거 질문답변 내역을 기억하지 않는 버전: `rag.py`
-- 과거 질문답변 내역을 기억하는 버전: `history_rag.py`
+- 과거 질문답변 내역을 **기억하는** 버전: `history_rag.py`
+
+## 폴더 구조
+
+다음 폴더 구조를 가정합니다. 
+
+⚠️ 현재 리포지토리에는 `data/`, `db/` 폴더가 없으므로 따로 추가해야 합니다.
+
+```
+ROOT/
+- data/ --> 문서가 들어있는 폴더
+- .env --> OpenAI API 키가 저장되어 있는 파일.
+- db/ --> 벡터DB
+- utils.py --> RAG 챗봇 로직 코드
+- rag.py --> 챗봇 (과거기억 못합) UI 코드
+- history_rag.py --> 챗봇 (과거기억함) UI 코드
+- RAG 챗봇 개발 (OpenAI API, Langchain, Streamlit).ipynb --> 이 파일부터 보면 됩니다.
+```
 
 ## 참고 자료
 - Langchain 공식 튜토리얼 (영어) https://python.langchain.com/v0.1/docs/use_cases/question_answering/quickstart/
